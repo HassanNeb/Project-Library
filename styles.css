@@ -32,6 +32,8 @@ body {
     align-items: center;
     padding-top: 30px;
     gap: 15px;
+    background-color: #fffaf0;
+    color: #facc15;
 }
 
 .nav {
@@ -42,12 +44,12 @@ body {
     align-items: center;
     color: beige;
     background-color: #002d62;
-    max-width: 60%;
     flex-shrink: 0;
 }
 
 .main {
     grid-area: c;
+    background-color: coral;
 }
 
 img {
@@ -61,7 +63,8 @@ img {
     padding: 10px;
 }
 
-.btn {
+.btn,
+.mainbtn {
     border-radius: 25px;
     padding: 10px 20px;
     font-size: 18px;
@@ -77,8 +80,8 @@ img {
     padding: 30px;
     color: beige;
     margin: 15px 0;
-    margin-left: 20px;
-    height: 180px;
+    margin-left: 50px;
+    height: 270px;
 }
 
 .main {
@@ -87,6 +90,7 @@ img {
     align-items: flex-start;
     padding-right: 100px;
     gap: 20px;
+    padding-top: 30px;
 }
 
 .card {
@@ -94,4 +98,24 @@ img {
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.btn:hover,
+.mainbtn:hover {
+    background-color: purple;
+}
+
+#form {
+    width: 100vw;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }

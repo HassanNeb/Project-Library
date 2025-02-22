@@ -11,39 +11,33 @@
             <!-- Header -->
             <div class="header">
                 <h1>Feel free to add a Book to our Library</h1>
-                <button class="btn">+ Add Book</button>
+                <button class="mainbtn">+ Add Book</button>
             </div>
+
+            <!-- Form element -->
+             <dialog class= "dialog-box">
+              
+                    <button class="close">&times;</button>
+               
+<form id = "form" > 
+    <label for="title">Title : </label>
+    <input type="text" name="title" id="title" required />
+    <label for="author">Author : </label>
+    <input type="text" name="author" id="author" required />
+    <label for="pages">Pages : </label>
+    <input type="text" name="pages" id="pages" required />
+    <label for="read">Read : </label>
+    <input type="checkbox" name="read" id="read" required />
+    <input type = "Submit" value = "Add Book">
+</form>
+</dialog>
             <!-- Main Card -->
             <div class="nav">
                 <img src="/images/library-svgrepo-com.svg" alt="Library" />
                 <h1>Welcome to The Odin Library</h1>
             </div>
             <div class="main">
-                <div class="card">
-                    <h4>Atomic Habits</h4>
-                    <p>By : James Clear</p>
-                    <p>364 Pages</p>
-                    <button class="btn">Read</button>
-                </div>
-                <div class="card">
-                    <h4>Atomic Habits</h4>
-                    <p>By : James Clear</p>
-                    <p>364 Pages</p>
-                    <button class="btn">Read</button>
-                </div>
-                <div class="card">
-                    <h4>Atomic Habits</h4>
-                    <p>By : James Clear</p>
-                    <p>364 Pages</p>
-                    <button class="btn">Read</button>
-                </div>
-                <div class="card">
-                    <h4>Atomic Habits</h4>
-                    <p>By : James Clear</p>
-                    <p>364 Pages</p>
-                    <button class="btn">Read</button>
-                </div>
-            </div>
+                
         </div>
         <script src="script.js"></script>
     </body>
