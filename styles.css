@@ -64,7 +64,8 @@ img {
 }
 
 .btn,
-.mainbtn {
+.mainbtn,
+.remove-btn {
     border-radius: 25px;
     padding: 10px 20px;
     font-size: 18px;
@@ -81,7 +82,14 @@ img {
     color: beige;
     margin: 15px 0;
     margin-left: 50px;
-    height: 270px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: black;
 }
 
 .main {
@@ -91,15 +99,6 @@ img {
     padding-right: 100px;
     gap: 20px;
     padding-top: 30px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
 }
 
 .btn:hover,

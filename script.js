@@ -7,6 +7,17 @@ function Book(name, author, pages, read) {
     this.pages = pages;
     this.read = read;
 }
+
+//function to toggle read
+Book.prototype.toggleRead = function () {
+    this.read = !this.read;
+};
+
+function toggleRead(index) {
+    myLibrary[index].toggleRead();
+    displayBooks();
+}
+
 // function to add Books to the Library
 function addBookToLibrary() {
     let name = document.querySelector("#title").value;
@@ -22,7 +33,7 @@ function addBookToLibrary() {
 function displayBooks() {
     const bookContainer = document.querySelector(".main");
     bookContainer.innerHTML = "";
-    myLibrary.forEach((element) => {
+    myLibrary.forEach((element, i) => {
         const bookCard = document.createElement("div");
         bookCard.classList.add("card");
 
@@ -30,25 +41,28 @@ function displayBooks() {
         <h3> Title : ${element.name}</h3>
         <p>  Author : ${element.author}</p>
         <p>  Pages : ${element.pages}</p>
-        <button class="btn"> ${
-            element.read ? "Read" : "Not Read"
-        }</button>        
+     <button class="btn" id="toggle-${i}">
+            ${element.read ? "Read" : "Not Read"}
+        </button>  
+        <button class="remove-btn" onclick="removeBook(${i})">Remove</button> 
+        <button class=" btn toggle-read" onclick="toggleRead(${i})">${
+            element.read ? "Mark as Not Read" : "Mark as Read"
+        }</button>
         `;
 
         bookContainer.appendChild(bookCard);
     });
 }
 
-let book2 = {
-    name: "The Hobbit",
-    author: "J.R.R. Tolkien",
-    pages: 295,
-    read: false,
-};
+//function to remove the cards
+function removeBook(index) {
+    myLibrary.splice(index, 1);
+    displayBooks();
+}
+
+let book2 = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
 
 myLibrary.push(book2);
-console.log(myLibrary);
-displayBooks();
 
 const addButton = document.querySelector(".mainbtn");
 addButton.addEventListener("click", () => {
